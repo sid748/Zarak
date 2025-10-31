@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Css File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- ===== Navbar Start ===== -->
+    <nav class="navbar navbar-expand-lg py-3">
+  <div class="container custom-navbar mx-auto">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Zarak United Logo">
+    </a>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="About-project.html">Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="properties.html">Buy/Sell</a></li>
+      </ul>
+    </div>
+
+    <div class="d-none d-lg-block">
+      <button class="contact-btn"><a href="contact.html" style="text-decoration: none; color: white";>CONTACT US</a></button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About us.html">About</a></li>
+      <li><a href="About-project.html">Properties</a></li>
+      <li><a href="properties.html">Buy/Sell</a></li>
+      <li><button class="contact-btn mt-3"><a href="contact.html">CONTACT US</a></button></li>
+    </ul>
+  </div>
+</nav>
+    <!-- ===== Navbar End ===== -->
+
+    <!-- contact form (Let's connect) -->
+    <section class="contact-section">
+        <div class="contact-overlay"></div>
+        <div class="container contact-content">
+            <div class="row">
+
+                <!-- Left: Info -->
+                <div class="col-lg-6 contact-info text-lg-start text-center">
+                    <h2>Let’s Connect<br>Today to Build</h2>
+                    <div class="row d-flex justify-content-start ">
+                        <div class="col-lg-6">
+
+                            <ul>
+                                <li><i class="bi bi-envelope"></i> contact@zarakunited.com</li>
+                                <li><i class="bi bi-telephone"></i> +91 9429693439</li>
+                                <li><i class="bi bi-geo-alt"></i> 416, Model Town, North Delhi,<br>New Delhi - 110049,
+                                    India</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="fw-semibold">Socials</p>
+                            <div class="contact-social">
+                                <div class="icons">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div class="icons">
+                                     <i class="fa-brands fa-x-twitter"></i>
+                                </div>
+                                <div class="icons">
+                                     <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                                <div class="icons">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </div>  
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right: Form -->
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="contact-form">
+                        <h6>Need clarity or details? Our team is just a message away.</h6>
+                        <form>
+                            <select class="form-select">
+                                <option selected disabled>Buy/Sell</option>
+                                <option>Buy</option>
+                                <option>Sell</option>
+                            </select>
+                            <select class="form-select">
+                                <option selected disabled>Budget</option>
+                                <option>Below 50L</option>
+                                <option>50L - 1Cr</option>
+                                <option>Above 1Cr</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="email" class="form-control" placeholder="Email*">
+                            <input type="text" class="form-control" placeholder="Phone">
+                            <input type="text" class="form-control" placeholder="Company's name">
+                            <input type="text" class="form-control" placeholder="Address">
+                            <textarea class="form-control" placeholder="Message" rows="3"></textarea>
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="career-section">
+        <div class="text-left">
+            <h2>Be a Part of Our Mission</h2>
+            <p>Looking to build your career in real estate and construction? Explore opportunities<br> with us and be
+                part of a company that values growth and collaboration.</p>
+        </div>
+
+        <div class="row justify-content-start align-items-start g-4">
+            <!-- Left Form -->
+            <div class="col-lg-6">
+                <div class="career-form">
+                    <h5>Send us your resume, and we’ll see where you fit.</h5>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="text" class="form-control" placeholder="Phone">
+                        <select class="form-select">
+                            <option selected disabled>Applying for Position</option>
+                            <option>Sales Executive</option>
+                            <option>Site Engineer</option>
+                            <option>Architect / Designer</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Years of Experience">
+                        <input type="text" class="form-control" placeholder="Expected CTA">
+                        <input type="text" class="form-control" placeholder="Current CTA">
+                        <button type="submit" class="btn-apply">Apply</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Job Cards -->
+            <div class="col-lg-6">
+                <div class="job-card">
+                    <h6>Sales Executive</h6>
+                    <p><span>Location:</span> Agra / Remote</p>
+                    <p><span>Experience:</span> 1–3 years</p>
+                    <p><span>Description:</span> Responsible for generating leads, managing client relationships, and
+                        assisting buyers through their property journey. <a href="#">Read More</a></p>
+                </div>
+
+                <div class="job-card">
+                    <h6>Site Engineer</h6>
+                    <p><span>Location:</span> Agra / Remote</p>
+                    <p><span>Experience:</span> 1–3 years</p>
+                    <p><span>Description:</span> Responsible for generating leads, managing client relationships, and
+                        assisting buyers through their property journey. <a href="#">Read More</a></p>
+                </div>
+
+                <div class="job-card">
+                    <h6>Architect / Designer</h6>
+                    <p><span>Location:</span> Agra / Remote</p>
+                    <p><span>Experience:</span> 1–3 years</p>
+                    <p><span>Description:</span> Responsible for generating leads, managing client relationships, and
+                        assisting buyers through their property journey. <a href="#">Read More</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- scrolling text section starts here -->
+    <div class="scrolling-text-container">
+        <div class="scrolling-text">
+            Creating spaces that inspire •  Let’s build something together •  Creating spaces that inspire •  Let’s
+            build something together Creating spaces that inspire •  Let’s build something together •  Creating spaces
+            that inspire •  Let’s build something together
+        </div>
+    </div>
+    <!-- scrolling text section ends here -->
+
+    <!-- Footer Section -->
+   <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Left Logo and Contact -->
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="footer-logo">
+            <img src="images/footer-logo.png" alt="Z Logo">
+          </div>
+          <p><strong>Email:</strong> contact@zarakunited.com</p>
+          <p><strong>Phone No:</strong> 9648376543</p>
+        </div>
+
+        <!-- social icons -->
+        <div class="col-lg-3 col-md-12 mb-4">
+          <div class="social-icons mt-4">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>CONTACT US</h5>
+          <p><strong>Zarak United LTD.</strong></p>
+          <p>1234 Chic Avenue<br>Fashion District, Suite 567<br>Style City, CA 90210<br>United
+            States</p>
+        </div>
+
+        <!-- Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>LINKS</h5>
+          <p><a href="index.html">HOME</a></p>
+          <p><a href="About-project.html">PROJECTS</a></p>
+          <p><a href="About us.html">ABOUT</a></p>
+          <p><a href="contact.html">CONTACT</a></p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <img src="images/footer-1.png" alt="Zarak United Logo">
+        <p class="made-by">Made With <i class="bi bi-heart-fill"></i> By MediaX</p>
+      </div>
+    </div>
+  </footer>
+    <!-- Footer Section End -->
+    <!-- Aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/0db0bdec09.js" crossorigin="anonymous"></script>
+    <!-- Js File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

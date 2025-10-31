@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zarak United</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Css File -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Aos css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!-- ===== Navbar Start ===== -->
+  <nav class="navbar navbar-expand-lg py-3">
+  <div class="container custom-navbar mx-auto">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Zarak United Logo">
+    </a>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="About-project.html">Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="properties.html">Buy/Sell</a></li>
+      </ul>
+    </div>
+
+    <div class="d-none d-lg-block">
+      <button class="contact-btn"><a href="contact.html" style="text-decoration: none; color: white";>CONTACT US</a></button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About us.html">About</a></li>
+      <li><a href="About-project.html">Properties</a></li>
+      <li><a href="properties.html">Buy/Sell</a></li>
+      <li><button class="contact-btn mt-3"><a href="contact.html">CONTACT US</a></button></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- ===== Navbar End ===== -->
+
+  <!-- hero section starts here -->
+
+   <section class="hero-section container-fluid position-relative d-flex align-items-center py-5">
+    <div class="hero-vector"></div>
+    <div class="hero-gradient"></div>
+
+    <div class="container d-flex flex-lg-row flex-column align-items-center justify-content-between">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <p class="small mb-2">Creating spaces that inspire.</p>
+        <h1 class="">Building Trust</h1>
+        <p class="big">Delivering homes and commercial spaces built on trust, precision, and a vision for better living.</p>
+        <button class="btn">VIEW OUR PROJECTS</button>
+
+        <div class="trusted-section my-5">
+          <div>
+            <img src="images/hero-testi-image.png" alt="Client 1">
+            <img src="images/hero-testi-image-1.png" alt="Client 2">
+            <img src="images/hero-testi-image-2.png" alt="Client 3">
+          </div>
+          <span>Trusted by 100+ Business Owners</span>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="hero-image mt-4 mt-lg-0">
+        <img src="images/hero-image.png" alt="Building" class="hero-building img-fluid">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================who we are section starts here=========================-->
+
+  <section class="who-we-are container my-5 py-5">
+    <div class="row  justify-content-center py-4">
+      <!-- Left Side -->
+      <div class="col-md-4 text-md-start text-center mb-4 mb-md-0">
+        <a href="#" class="know-more">
+          Know More About Us
+          <i class="bi bi-arrow-up-right"></i></i>
+        </a>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-7 right-side">
+        <h2 class="who-heading">Who Are We</h2>
+        <p class="who-desc">
+          Founded in 2024, our company brings together experience, innovation, and commitment
+          to create residential and commercial spaces that stand the test of time. With every project,
+          we aim to deliver more than structures — we deliver trust, comfort, and value for our customers.
+        </p>
+
+        <div class="counter-box d-flex flex-wrap gap-5 mt-4">
+          <div class="counter-item">
+            <h3><span class="counter-number" data-target="25">0</span>+</h3>
+            <span>Years of Experience</span>
+          </div>
+          <div class="counter-item">
+            <h3><span class="counter-number" data-target="100">0</span>%</h3>
+            <span>Customer Satisfaction</span>
+          </div>
+          <div class="counter-item">
+            <h3><span class="counter-number" data-target="10">0</span>+</h3>
+            <span>Professional Team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================why choose us section starts here========================= -->
+  <section class="customer-approach d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-11">
+          <div class="content text-start text-md-start">
+            <span class="subheading">Why Choose Us</span>
+            <h1 class="main-heading">Customer-Centric<br>Approach</h1>
+
+            <!-- vertical golden line with dots -->
+            <div class="vertical-line-wrapper">
+              <span class="dot top-dot"></span>
+              <span class="vertical-line"></span>
+              <span class="dot bottom-dot"></span>
+            </div>
+
+            <p class="desc">We listen, <em>understand</em>, and build around your needs.</p>
+            <a href="#" class="btn-custom">VIEW OUR PROJECTS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================why choose us section ends here========================= -->
+
+  <!-- our project section starts here  -->
+
+  <section class="projects-section py-5">
+    <div class="container-lg">
+      <div class="row align-items-start mb-4">
+        <div class="col-md-7">
+          <h1 class="projects-title">Our Projects</h1>
+        </div>
+        <div class="col-md-5 text-md-end d-flex justify-content-end align-items-center gap-3">
+          <a class="more-projects-link" href="projects.html">
+            <span>Check Out More Projects</span>
+            <span class="more-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tabs (pills) on top-left of first card in PNG — we'll show them above the slider for accessibility -->
+      <!-- <div class="mb-3">
+        <div class="tabs d-flex gap-2">
+          <button class="tab-btn active" data-cat="all">All</button>
+          <button class="tab-btn" data-cat="shopping">Shopping Complex</button>
+          <button class="tab-btn" data-cat="parking">Parking Spot</button>
+        </div>
+      </div> -->
+
+      <!-- Slider wrapper -->
+      <div class="slider-wrap position-relative">
+        <!-- viewport -->
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <!-- Slide 1 -->
+            <article class="card-slide" data-cat="shopping">
+              <div class="card-media">
+                <img src="images/project-1.png" alt="Project 1" />
+              </div>
+              <div class="card-tags">
+                <span class="pill">Shopping Complex</span>
+                <span class="pill">Parking Spot</span>
+              </div>
+              <a class="card-open" href="project-detail.html" title="Open project"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="card-caption">
+                <h4>Lorem Ipsum Building - Agra</h4>
+              </div>
+            </article>
+
+            <!-- Slide 2 -->
+            <article class="card-slide grayscale" data-cat="parking">
+              <div class="card-media">
+                <img src="images/project-2.png" alt="Project 2" />
+              </div>
+              <div class="card-tags">
+                <span class="pill">Shopping Complex</span>
+                <span class="pill">Parking Spot</span>
+              </div>
+              <a class="card-open" href="project-detail.html" title="Open project"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="card-caption">
+                <h4>Modern Glass Building</h4>
+              </div>
+            </article>
+
+            <!-- Slide 3 (partial visible) -->
+            <article class="card-slide" data-cat="shopping">
+              <div class="card-media">
+                <img src="images/project-2.png" alt="Project 3" />
+              </div>
+              <div class="card-tags">
+                <span class="pill">Shopping Complex</span>
+                <span class="pill">Parking Spot</span>
+              </div>
+              <a class="card-open" href="project-detail.html" title="Open project"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="card-caption">
+                <h4>Classic Facade Building</h4>
+              </div>
+            </article>
+
+
+             <!-- Slide 1 -->
+            <article class="card-slide" data-cat="shopping">
+              <div class="card-media">
+                <img src="images/project-1.png" alt="Project 1" />
+              </div>
+              <div class="card-tags">
+                <span class="pill">Shopping Complex</span>
+                <span class="pill">Parking Spot</span>
+              </div>
+              <a class="card-open" href="project-detail.html" title="Open project"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="card-caption">
+                <h4>Lorem Ipsum Building - Agra</h4>
+              </div>
+            </article>
+
+            <!-- Slide 2 -->
+            <article class="card-slide grayscale" data-cat="parking">
+              <div class="card-media">
+                <img src="images/project-2.png" alt="Project 2" />
+              </div>
+              <div class="card-tags">
+                <span class="pill">Shopping Complex</span>
+                <span class="pill">Parking Spot</span>
+              </div>
+              <a class="card-open" href="project-detail.html" title="Open project"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="card-caption">
+                <h4>Modern Glass Building</h4>
+              </div>
+            </article>
+
+            <!-- Slide 3 (partial visible) -->
+            <article class="card-slide" data-cat="shopping">
+              <div class="card-media">
+                <img src="images/project-2.png" alt="Project 3" />
+              </div>
+              <div class="card-tags">
+                <span class="pill">Shopping Complex</span>
+                <span class="pill">Parking Spot</span>
+              </div>
+              <a class="card-open" href="project-detail.html" title="Open project"><i class="bi bi-arrow-up-right"></i></a>
+              <div class="card-caption">
+                <h4>Classic Facade Building</h4>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- left arrow button (centered vertically) -->
+        <button class="nav-arrow left-arrow" aria-label="previous slide"><i class="fa-solid fa-arrow-left"></i></button>
+
+        <!-- right arrow button -->
+        <button class="nav-arrow right-arrow" aria-label="next slide"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial section starts here -->
+ <section class="testimonial-section">
+  <h2>Testimonials</h2>
+
+  <div class="testimonial-carousel">
+    <div class="testimonial-item active">
+      <div class="testimonial-box">
+        <div class="testimonial-content">
+          <div class="testimonial-img">
+            <img src="images/Rectangle 4942.png" alt="Client Photo">
+          </div>
+          <div class="testimonial-text">
+            <p>
+              Their team made our dream home a reality. Transparent, responsive, and reliable from start to finish.
+              Their team made our dream home a reality. Transparent, responsive, and reliable from start to finish.
+            </p>
+            <p class="author">– Neha & Rakesh Sharma</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-item">
+      <div class="testimonial-box">
+        <div class="testimonial-content">
+          <div class="testimonial-img">
+            <img src="images/Rectangle 4942.png" alt="Client Photo">
+          </div>
+          <div class="testimonial-text">
+            <p>
+              Exceptional service and attention to detail. They truly understood our vision and brought it to life beautifully.
+            </p>
+            <p class="author">– Amit & Priya Verma</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-item">
+      <div class="testimonial-box">
+        <div class="testimonial-content">
+          <div class="testimonial-img">
+            <img src="images/Rectangle 4942.png" alt="Client Photo">
+          </div>
+          <div class="testimonial-text">
+            <p>
+              Professional, innovative, and supportive throughout. We loved working with them and are thrilled with the results.
+            </p>
+            <p class="author">– Rohan & Aditi Kapoor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-indicators">
+      <button data-index="0" class="active"></button>
+      <button data-index="1"></button>
+      <button data-index="2"></button>
+    </div>
+  </div>
+</section>
+
+  <!-- scrolling text section starts here -->
+  <div class="scrolling-text-container">
+    <div class="scrolling-text">
+      Creating spaces that inspire •  Let’s build something together •  Creating spaces that inspire •  Let’s build
+      something together Creating spaces that inspire •  Let’s build something together •  Creating spaces that inspire
+      •  Let’s build something together
+    </div>
+  </div>
+  <!-- scrolling text section ends here -->
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Left Logo and Contact -->
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="footer-logo">
+            <img src="images/footer-logo.png" alt="Z Logo">
+          </div>
+          <p><strong>Email:</strong> contact@zarakunited.com</p>
+          <p><strong>Phone No:</strong> 9648376543</p>
+        </div>
+
+        <!-- social icons -->
+        <div class="col-lg-3 col-md-12 mb-4">
+          <div class="social-icons mt-4">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>CONTACT US</h5>
+          <p><strong>Zarak United LTD.</strong></p>
+          <p>1234 Chic Avenue<br>Fashion District, Suite 567<br>Style City, CA 90210<br>United
+            States</p>
+        </div>
+
+        <!-- Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>LINKS</h5>
+          <p><a href="index.html">HOME</a></p>
+          <p><a href="About-project.html">PROJECTS</a></p>
+          <p><a href="About us.html">ABOUT</a></p>
+          <p><a href="contact.html">CONTACT</a></p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <img src="images/footer-1.png" alt="Zarak United Logo">
+        <p class="made-by">Made With <i class="bi bi-heart-fill"></i> By MediaX</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Aos js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/0db0bdec09.js" crossorigin="anonymous"></script>
+  <!-- Js File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
