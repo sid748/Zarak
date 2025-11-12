@@ -455,9 +455,11 @@
     }
   }
 
+  /* why choose us section here */
+
   .customer-approach {
     position: relative;
-    background: url("images/Rectangle 6.png") center center/cover no-repeat;
+    background: url("images/shopping-complex.png") center center/cover no-repeat;
     min-height: 100vh;
     color: #fff;
     overflow: hidden;
@@ -1268,7 +1270,7 @@
   .team-img {
     border-radius: 10px;
     width: 100%;
-    height: 320px;
+    height: 520px;
     object-fit: cover;
   }
 
@@ -1461,7 +1463,7 @@
   .hero__bg {
     position: absolute;
     inset: 0;
-    background-image: url(images/hero-image\ \(2\).png);
+    background-image: url(images/hero-image\(1\).jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1906,7 +1908,7 @@
   .hero-project .hero__bg {
     position: absolute;
     inset: 0;
-    background-image: url(images/hero-image\ \(2\).png);
+    background-image: url(images/hero-image\(1\).jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

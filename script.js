@@ -55,103 +55,104 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(section);
 });
-// our project section starts here
-/* Simple slider with two-visible layout + partial peek of next slide.
-  Tabs filter slides by data-cat values (all/shopping/parking).
-*/
 
+// homepage our project carousel script
 document.addEventListener('DOMContentLoaded', function () {
   const track = document.querySelector('.slider-track');
   const slides = Array.from(document.querySelectorAll('.card-slide'));
   const leftBtn = document.querySelector('.left-arrow');
   const rightBtn = document.querySelector('.right-arrow');
   const tabs = Array.from(document.querySelectorAll('.tab-btn'));
-  let index = 0;
 
-  // Compute spacing & widths to move slider precisely.
-  function computeTranslate(i) {
-    // We'll calculate the pixel translate so that index 0 = start (leftmost),
-    // index increments move by (slideWidth + gap). We want a peek of next slide.
+  // Step 1: Clone first and last slides for smooth loop
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+  firstClone.classList.add('clone');
+  lastClone.classList.add('clone');
+  track.insertBefore(lastClone, slides[0]);
+  track.appendChild(firstClone);
+
+  const allSlides = Array.from(document.querySelectorAll('.card-slide'));
+  let index = 1; // start at the first "real" slide
+  let isTransitioning = false;
+
+  function getSlideData() {
     const gap = parseInt(getComputedStyle(track).gap) || 28;
-    const slideRect = slides[0].getBoundingClientRect();
-    const slideWidth = slideRect.width;
-    // Move by (slideWidth + gap) * i
-    return -(i * (slideWidth + gap));
+    const slideWidth = allSlides[0].getBoundingClientRect().width;
+    return { slideWidth, gap };
   }
 
-  function clampIndex(i) {
-    // max index so last visible slide still leaves partial next like PNG.
-    const visible = getVisibleCount();
-    const maxIndex = Math.max(0, slides.length - visible); // allow peek
-    return Math.min(Math.max(0, i), maxIndex);
-  }
-
-  function getVisibleCount() {
-    // approximate number of fully visible slides based on viewport and slide width
-    const viewport = document.querySelector('.slider-viewport').clientWidth;
-    const slideRect = slides[0].getBoundingClientRect();
-    const slideWidth = slideRect.width;
-    return Math.floor(viewport / (slideWidth + parseInt(getComputedStyle(track).gap || 28)));
-  }
-
-  function goTo(i) {
-    index = clampIndex(i);
-    track.style.transform = `translateX(${computeTranslate(index)}px)`;
-    // Disable right button if at max index
-    if (index >= Math.max(0, slides.length - getVisibleCount())) {
-      rightBtn.style.opacity = 0.5;
-      rightBtn.style.pointerEvents = 'none';
-    } else {
-      rightBtn.style.opacity = 1;
-      rightBtn.style.pointerEvents = 'auto';
-    }
-    // Disable left button if at 0
-    if (index <= 0) {
-      leftBtn.style.opacity = 0.5;
-      leftBtn.style.pointerEvents = 'none';
-    } else {
-      leftBtn.style.opacity = 1;
-      leftBtn.style.pointerEvents = 'auto';
+  function goTo(i, transition = true) {
+    if (i < 0 || i >= allSlides.length) return;
+    const { slideWidth, gap } = getSlideData();
+    const moveX = -(i * (slideWidth + gap));
+    track.style.transition = transition ? 'transform 0.5s ease' : 'none';
+    track.style.transform = `translateX(${moveX}px)`;
+    if (transition) {
+      isTransitioning = true;
+      leftBtn.disabled = true;
+      rightBtn.disabled = true;
     }
   }
 
-  // Wait images to load before computing sizes (basic)
-  window.addEventListener('load', () => { goTo(0); });
+  // Step 2: Transition fix for looping illusion
+  track.addEventListener('transitionend', () => {
+    isTransitioning = false;
+    leftBtn.disabled = false;
+    rightBtn.disabled = false;
+    if (allSlides[index] && allSlides[index].classList.contains('clone')) {
+      if (index === allSlides.length - 1) {
+        index = 1; // loop back to real first
+      } else if (index === 0) {
+        index = allSlides.length - 2; // loop to real last
+      }
+      goTo(index, false);
+    }
+  });
 
-  // Buttons
+  // Step 3: Arrow buttons
   rightBtn.addEventListener('click', () => {
-    goTo(index + 1);
-  });
-  leftBtn.addEventListener('click', () => {
-    goTo(index - 1);
+    if (isTransitioning) return;
+    index++;
+    if (index >= allSlides.length) index = 0;
+    goTo(index);
   });
 
-  // Tabs: filter slides by data-cat
+  leftBtn.addEventListener('click', () => {
+    if (isTransitioning) return;
+    index--;
+    if (index < 0) index = allSlides.length - 1;
+    goTo(index);
+  });
+
+  // Step 4: On load — jump to real first slide
+  window.addEventListener('load', () => {
+    goTo(index, false);
+  });
+
+  // Step 5: Tabs (optional filtering)
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       const cat = tab.dataset.cat;
-      // show/hide slides
-      slides.forEach(s => {
+      allSlides.forEach(s => {
         if (cat === 'all') s.style.display = 'block';
         else s.style.display = s.dataset.cat === cat ? 'block' : 'none';
       });
-      // rebuild slides array to only visible ones for translation
-      // but simple approach: reset transform and go to 0
-      // small timeout to let layout recalc
-      setTimeout(() => { goTo(0); }, 60);
+      index = 1;
+      setTimeout(() => { goTo(index, false); }, 60);
     });
   });
 
-  // Recompute on resize
+  // Step 6: Responsive recalculation
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => { goTo(index); }, 120);
+    resizeTimer = setTimeout(() => { goTo(index, false); }, 120);
   });
-
 });
+
 
 // Homepage "Who We Are" section counter animation
 document.addEventListener("DOMContentLoaded", () => {
@@ -344,3 +345,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Disable auto-slide (manual only)
 });
+
+// about project page carousel script
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slider-wrapper .slider-img");
+    const dots = document.querySelectorAll(".slider-dots span");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    let currentSlide = 0;
+    let slideInterval;
+
+    // Function to show a specific slide
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        dots[i].classList.remove("active");
+      });
+      slides[index].classList.add("active");
+      dots[index].classList.add("active");
+    }
+
+    // Next / Prev slide functions
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Auto play
+    function startAutoPlay() {
+      slideInterval = setInterval(nextSlide, 4000); // 4 seconds
+    }
+
+    function stopAutoPlay() {
+      clearInterval(slideInterval);
+    }
+
+    // Button click events
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      stopAutoPlay();
+      startAutoPlay();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      stopAutoPlay();
+      startAutoPlay();
+    });
+
+    // Dots click event
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        currentSlide = i;
+        showSlide(currentSlide);
+        stopAutoPlay();
+        startAutoPlay();
+      });
+    });
+
+    // Start slider
+    showSlide(currentSlide);
+    startAutoPlay();
+  });

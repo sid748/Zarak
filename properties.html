@@ -46,45 +46,46 @@
     <div class="hero__overlay" aria-hidden="true"></div>
     <!-- ===== Navbar Start ===== -->
      <nav class="navbar navbar-expand-lg py-3">
-  <div class="container custom-navbar mx-auto">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/logo.png" alt="Zarak United Logo">
-    </a>
+    <div class="container custom-navbar mx-auto">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Zarak United Logo">
+      </a>
 
-    <!-- Hamburger -->
-    <button class="navbar-toggler" type="button">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <!-- Desktop Menu -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="About-project.html">Properties</a></li>
-        <li class="nav-item"><a class="nav-link" href="properties.html">Buy/Sell</a></li>
+      <!-- Desktop Menu -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="About-project.html">Project</a></li>
+          <li class="nav-item"><a class="nav-link" href="properties.html">Buy/Sell</a></li>
+        </ul>
+      </div>
+
+      <div class="d-none d-lg-block">
+        <button class="contact-btn"><a href="contact.html" style="text-decoration: none; color: white" ;>CONTACT
+            US</a></button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu-header">
+        <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="mobile-menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About us.html">About</a></li>
+        <li><a href="About-project.html">Project</a></li>
+        <li><a href="properties.html">Buy/Sell</a></li>
+        <li><button class="contact-btn mt-3"><a href="contact.html">CONTACT US</a></button></li>
       </ul>
     </div>
-
-    <div class="d-none d-lg-block">
-      <button class="contact-btn"><a href="contact.html" style="text-decoration: none; color: white";>CONTACT US</a></button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay">
-    <div class="mobile-menu-header">
-      <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <ul class="mobile-menu-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About us.html">About</a></li>
-      <li><a href="About-project.html">Properties</a></li>
-      <li><a href="properties.html">Buy/Sell</a></li>
-      <li><button class="contact-btn mt-3"><a href="contact.html">CONTACT US</a></button></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
     <!-- ===== Navbar End ===== -->
 
     <!--====================== HERO ========================================-->
@@ -171,7 +172,7 @@
           <!-- Slides -->
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=900&q=80"
+              <img src="images/property-new.jpg"
                 class="d-block w-100" alt="Building">
             </div>
             <div class="carousel-item">
@@ -190,7 +191,7 @@
       </div>
 
       <div class="property-details">
-        <h3 class="property-title">Lorem Ipsum Building</h3>
+        <h3 class="property-title">Infinix Complex</h3>
         <div class="property-tags mb-3 w-100 w-lg-75">
           <span>Shopping Complex</span>
           <span>Parking Spot</span>
@@ -212,18 +213,18 @@
     </div>
 
     <!-- Property 2 -->
-    <div class="property-card mb-4" data-type="Commercial" data-location="Delhi" data-style="Classic"
+    <!-- <div class="property-card mb-4" data-type="Commercial" data-location="Delhi" data-style="Classic"
       data-category="Rent">
       <div class="property-image mb-3">
-        <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel2" class="carousel slide" data-bs-ride="carousel"> -->
           <!-- Indicators -->
-          <div class="carousel-indicators">
+          <!-- <div class="carousel-indicators">
             <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"></button>
-          </div>
+          </div> -->
 
           <!-- Slides -->
-          <div class="carousel-inner">
+          <!-- <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
                 class="d-block w-100" alt="Building">
@@ -231,19 +232,19 @@
             <div class="carousel-item">
               <img src="images/property-img.png" class="d-block w-100" alt="Building">
             </div>
-          </div>
+          </div> -->
 
           <!-- Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
           </button>
         </div>
-      </div>
+      </div> -->
 
-      <div class="property-details">
+      <!-- <div class="property-details">
         <h3 class="property-title">Elegant Commercial Plaza</h3>
         <div class="property-tags mb-3 w-100 w-lg-75">
           <span>Shopping Complex</span>
@@ -262,21 +263,21 @@
           A premier commercial property located in Delhi, designed with timeless architecture and
           state-of-the-art facilities... <a href="#">Read More</a>
         </p>
-      </div>
+      </div> -->
     </div>
 
     <!-- Property 3 -->
-    <div class="property-card" data-type="Industrial" data-location="Delhi" data-style="Modern" data-category="Rent">
+    <!-- <div class="property-card" data-type="Industrial" data-location="Delhi" data-style="Modern" data-category="Rent">
       <div class="property-image mb-3">
-        <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel3" class="carousel slide" data-bs-ride="carousel"> -->
           <!-- Indicators -->
-          <div class="carousel-indicators">
+          <!-- <div class="carousel-indicators">
             <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"></button>
-          </div>
+          </div> -->
 
           <!-- Slides -->
-          <div class="carousel-inner">
+          <!-- <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
                 class="d-block w-100" alt="Building">
@@ -284,19 +285,19 @@
             <div class="carousel-item">
               <img src="images/property-img.png" class="d-block w-100" alt="Building">
             </div>
-          </div>
+          </div> -->
 
           <!-- Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-      </div>
+          </button> -->
+        <!-- </div>
+      </div> -->
 
-      <div class="property-details">
+      <!-- <div class="property-details">
         <h3 class="property-title">Industrial Hub Complex</h3>
         <div class="property-tags mb-3 w-100 w-lg-75">
           <span>Shopping Complex</span>
@@ -315,17 +316,17 @@
           Strategically located industrial complex in Delhi, offering modern facilities and easy access
           to major transport links... <a href="#">Read More</a>
         </p>
-      </div>
-    </div>
-  </div>
+      </div> -->
+    <!-- </div>
+  </div> -->
 
-  <!-- scrolling text section starts here -->
+ <!-- scrolling text section starts here -->
   <div class="scrolling-text-container">
     <div class="scrolling-text">
-      Creating spaces that inspire •  Let’s build something together •  Creating spaces that inspire •
-       Let’s
-      build something together Creating spaces that inspire •  Let’s build something together •  Creating
-      spaces that inspire •  Let’s build something together
+      Turning Land into Opportunity • Building with Trust • Creating Spaces that Inspire • Designed Around You •
+      Delivering Value that Lasts •
+      Turning Land into Opportunity • Building with Trust • Creating Spaces that Inspire • Designed Around You •
+      Delivering Value that Lasts •
     </div>
   </div>
   <!-- scrolling text section ends here -->
@@ -337,13 +338,11 @@
         <!-- Left Logo and Contact -->
         <div class="col-lg-4 col-md-12 mb-4">
           <div class="footer-logo">
-            <a href="index.html">
-              <img src="images/footer-logo.png" alt="Z Logo">
-            </a>
-            
+            <a href="" href="index.html"><img src="images/footer-logo.png" alt="Z Logo"></a>
+
           </div>
-          <p><strong>Email:</strong> contact@zarakunited.com</p>
-          <p><strong>Phone No:</strong> 9648376543</p>
+          <p><strong>Email:</strong> info@sapphirerealties.com</p>
+          <p><strong>Phone No:</strong> +91 70552 56358</p>
         </div>
 
         <!-- social icons -->
@@ -359,9 +358,9 @@
         <!-- Contact Us -->
         <div class="col-lg-3 col-md-6 mb-4">
           <h5>CONTACT US</h5>
-          <p><strong>Zarak United LTD.</strong></p>
-          <p>1234 Chic Avenue<br>Fashion District, Suite 567<br>Style City, CA 90210<br>United
-            States</p>
+          <p>Zarak United LTD.<br>
+            307B, Business Square, Sanjay
+            Place, Near ICICI Bank, Agra</p>
         </div>
 
         <!-- Links -->
@@ -377,11 +376,11 @@
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <img src="images/footer-1.png" alt="Zarak United Logo">
-        <p class="made-by">Made With <i class="bi bi-heart-fill"></i> By MediaX</p>
+        <p class="made-by">Made With <i class="bi bi-heart-fill"></i> By <a href="https://mediax.co.in/">MediaX</a></p>
       </div>
     </div>
   </footer>
-  <!-- Footer Section End -->
+
 
   <!-- GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
