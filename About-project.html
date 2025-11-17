@@ -30,6 +30,12 @@
       <!-- Bootstrap Icons -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
+      <!-- Odometer CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+
+      <!-- Odometer JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+
 </head>
 
 <style>
@@ -63,7 +69,7 @@
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="About-project.html">Project</a></li>
-          <li class="nav-item"><a class="nav-link" href="properties.html">Buy/Sell</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="properties.html">Buy/Sell</a></li> -->
         </ul>
       </div>
 
@@ -82,7 +88,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="About us.html">About</a></li>
         <li><a href="About-project.html">Project</a></li>
-        <li><a href="properties.html">Buy/Sell</a></li>
+        <!-- <li><a href="properties.html">Buy/Sell</a></li> -->
         <li><button class="contact-btn mt-3"><a href="contact.html">CONTACT US</a></button></li>
       </ul>
     </div>
@@ -98,11 +104,12 @@
       <div class="row align-items-center">
         <div class="col-12 col-md-10 col-lg-8">
           <div class="hero__left">
-            <h3 class="hero__kicker">Our Latest Achievement</h3>
+            <h3 class="hero__kicker">Sapphire Complex</h3>
 
             <h1 class="hero__title">
-              Golden Square<br>
-              Commercial Plaza
+              Sapphire Complex
+<br>
+              Rajpur Chungi, Agra
             </h1>
 
             <div class="hero__meta" aria-hidden="false">
@@ -115,7 +122,7 @@
 
               <div class="meta-item" title="Location">
                 <i class="bi bi-geo-alt-fill"></i>
-                <span>Agra Cantt, Green Street Market</span>
+                <span>Rajpur Chungi, Agra</span>
               </div>
             </div>
 
@@ -136,41 +143,42 @@
         <div class="col-lg-10 text-start">
           <h2>About Project</h2>
           <p>
-            At ZarakUnited, every project is a reflection of our commitment to quality, design excellence, and purposeful development. Founded on a belief that every structure should add value to people's lives, our developments blend functionality, aesthetics, and sustainability to create spaces that stand the test of time.
+           Sapphire Complex is a premium commercial hub strategically located at Rajpur Chungi, Agra. Designed for modern businesses, it features spacious shops and halls with excellent visibility, accessibility, and amenities. Ideal for retail, showrooms, and offices, it offers high investment value in a rapidly developing area.
+
           </p>
-          <p>
+          <!-- <p>
            From premium residences to modern commercial spaces, each project is thoughtfully planned to offer comfort, connectivity, and long-term value. With every new venture, we move closer to our vision — turning land into opportunity and shaping vibrant communities for the future.
-          </p>
+          </p> -->
         </div>
       </div>
 
       <!-- COUNTERS -->
       <div class="row counter-section text-center justify-content-center">
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-2">
           <div class="counter-box">
-            <div class="counter-number" data-target="5">00</div>
+            <div class="counter-number"><span class="odometer" data-target="4">0</span></div>
             <div class="counter-label">Floors</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="counter-box">
+            <div class="counter-number"><span class="odometer" data-target="18">0</span>+</div>
+            <div class="counter-label">Ceiling Height(ft)</div>
           </div>
         </div>
 
         <div class="col-6 col-md-3">
           <div class="counter-box">
-            <div class="counter-number" data-target="20">00</div>
+            <div class="counter-number"><span class="odometer" data-target="48">0</span>+</div>
             <div class="counter-label">Shops</div>
           </div>
         </div>
 
         <div class="col-6 col-md-3">
           <div class="counter-box">
-            <div class="counter-number" data-target="10">00</div>
-            <div class="counter-label">Elevator</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3">
-          <div class="counter-box">
-            <div class="counter-number" data-target="1500">0000</div>
-            <div class="counter-label">Square Feet</div>
+            <div class="counter-number"><span class="odometer" data-target="12">0</span>+</div>
+            <div class="counter-label">Hall Spaces</div>
           </div>
         </div>
       </div>
@@ -179,26 +187,11 @@
 
 
 
-  <!-- =========================carousel section starts here=============================== -->
-   <!-- SLIDER SECTION -->
+  <!-- =========================image section starts here=============================== -->
+   <!-- IMAGE SECTION -->
   <section class="project-slider-section">
     <div class="container-fluid p-0">
-      <div class="slider-wrapper">
-        <img src="images/Carousel.jpg" class="slider-img fade active" alt="Slide 1" />
-        <img src="images/Carousel.jpg" class="slider-img fade" alt="Slide 2" />
-        <img src="images/Carousel.jpg" class="slider-img fade" alt="Slide 3" />
-      </div>
-
-      <!-- Arrows & Dots -->
-      <div class="slider-arrows">
-        <button id="prevBtn">&#8592;</button>
-        <div class="slider-dots">
-          <span class="active"></span>
-          <span></span>
-          <span></span>
-        </div>
-        <button id="nextBtn">&#8594;</button>
-      </div>
+      <img src="images/Carousel.jpg" alt="Project Image" style="width: 100%; height: auto;" />
     </div>
 
     <div class="slider-bottom-line"></div>

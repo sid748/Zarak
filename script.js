@@ -10,29 +10,92 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// === Mobile menu toggle ===
+// === Mobile menu toggle for overlay (used in pages like About us, properties, etc.) ===
 const toggler = document.querySelector('.navbar-toggler');
 const mobileMenu = document.querySelector('.mobile-menu-overlay');
 const closeMenu = document.querySelector('.close-menu');
 
-// Open menu
-toggler.addEventListener('click', () => {
-  mobileMenu.classList.add('active');
-  toggler.classList.add('hide');
-});
-
-// Close menu
-closeMenu.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
-  toggler.classList.remove('hide');
-});
-
-// Optional: close menu when clicking a link
-document.querySelectorAll('.mobile-menu-list a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    toggler.classList.remove('hide');
+if (toggler && mobileMenu) {
+  // Open menu (slide in from left + hamburger → cross)
+  toggler.addEventListener('click', () => {
+    mobileMenu.classList.add('active');        // menu slides in
+    toggler.classList.add('open');             // hamburger → cross
   });
+
+  // Close menu
+  if (closeMenu) {
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');     // menu slides out
+      toggler.classList.remove('open');          // cross → hamburger
+    });
+  }
+
+  // Close menu when clicking a mobile menu link
+  document.querySelectorAll('.mobile-menu-list a:not(.mobile-dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      toggler.classList.remove('open');
+    });
+  });
+
+  // Close menu when clicking submenu links
+  document.querySelectorAll('.mobile-submenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      toggler.classList.remove('open');
+    });
+  });
+}
+
+// Mobile dropdown toggle
+document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const submenu = toggle.nextElementSibling;
+    submenu.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+});
+
+// === Fullscreen mobile menu toggle (used in index.html) ===
+const mobileToggle = document.querySelector('.mobile-toggle');
+const mobileFullscreen = document.querySelector('.mobile-menu-fullscreen');
+
+if (mobileToggle && mobileFullscreen) {
+  mobileToggle.addEventListener('click', () => {
+    mobileFullscreen.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
+  });
+
+  // Close menu when clicking a mobile menu link
+  document.querySelectorAll('.mobile-menu-items a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileFullscreen.classList.remove('active');
+      mobileToggle.classList.remove('active');
+    });
+  });
+}
+
+// Desktop dropdown toggle (click-based)
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  const menu = toggle.nextElementSibling;
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Close other open menus
+    document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
+      if (openMenu !== menu) openMenu.classList.remove('show');
+    });
+
+    menu.classList.toggle('show');
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-menu.show').forEach(menu => menu.classList.remove('show'));
+  }
 });
 
 
@@ -275,11 +338,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// counter script
+// Odometer counter script
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const counters = document.querySelectorAll(".counter-number");
+  const counters = document.querySelectorAll(".odometer");
 
   counters.forEach((counter, i) => {
     const target = +counter.getAttribute("data-target");
@@ -297,30 +360,18 @@ document.addEventListener("DOMContentLoaded", () => {
           trigger: box,
           start: "top 90%",
         },
-        onStart: () => animateCounter(counter, target),
+        onStart: () => {
+          const odometer = new Odometer({
+            el: counter,
+            value: 0,
+            format: '',
+            duration: 2000,
+          });
+          odometer.update(target);
+        },
       }
     );
   });
-
-  function animateCounter(element, target) {
-    let start = 0;
-    const duration = 2; // seconds
-    const stepTime = 20;
-    const totalSteps = (duration * 1000) / stepTime;
-    const increment = target / totalSteps;
-    const initialLength = element.textContent.length; // Get initial text length for padding
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        start = target;
-        clearInterval(timer);
-      }
-      element.textContent = Math.floor(start)
-        .toString()
-        .padStart(initialLength, "0");
-    }, stepTime);
-  }
 });
 
 // testimonial carousel script
@@ -346,69 +397,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Disable auto-slide (manual only)
 });
 
-// about project page carousel script
-document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".slider-wrapper .slider-img");
-    const dots = document.querySelectorAll(".slider-dots span");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    let currentSlide = 0;
-    let slideInterval;
 
-    // Function to show a specific slide
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        dots[i].classList.remove("active");
-      });
-      slides[index].classList.add("active");
-      dots[index].classList.add("active");
-    }
-
-    // Next / Prev slide functions
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    // Auto play
-    function startAutoPlay() {
-      slideInterval = setInterval(nextSlide, 4000); // 4 seconds
-    }
-
-    function stopAutoPlay() {
-      clearInterval(slideInterval);
-    }
-
-    // Button click events
-    nextBtn.addEventListener("click", () => {
-      nextSlide();
-      stopAutoPlay();
-      startAutoPlay();
-    });
-
-    prevBtn.addEventListener("click", () => {
-      prevSlide();
-      stopAutoPlay();
-      startAutoPlay();
-    });
-
-    // Dots click event
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        currentSlide = i;
-        showSlide(currentSlide);
-        stopAutoPlay();
-        startAutoPlay();
-      });
-    });
-
-    // Start slider
-    showSlide(currentSlide);
-    startAutoPlay();
-  });
