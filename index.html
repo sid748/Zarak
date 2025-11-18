@@ -35,21 +35,22 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
   <!-- Odometer -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
 </head>
 
 
 <body>
   <!-- ===== Navbar Start ===== -->
-  <nav class="navbar navbar-expand-lg py-3">
+ <nav class="navbar navbar-expand-lg py-3">
   <div class="container custom-navbar mx-auto">
     <a class="navbar-brand" href="index.html">
       <img src="images/logo.png" alt="Zarak United Logo">
     </a>
 
-    <!-- 2 LINE HAMBURGER -->
-    <button class="mobile-toggle">
+    <!-- 2 Line Hamburger -->
+    <button class="mobile-toggle d-lg-none">
       <span></span>
       <span></span>
     </button>
@@ -78,12 +79,29 @@
 
   <!-- FULLSCREEN MOBILE MENU -->
   <div class="mobile-menu-fullscreen">
+
     <ul class="mobile-menu-items">
+
       <li><a href="index.html">Home</a></li>
+
       <li><a href="About us.html">About</a></li>
-      <li><a href="About-project.html">Sapphire Complex</a></li>
+
+      <!-- MOBILE DROPDOWN -->
+      <li class="mobile-dropdown">
+        <div class="mobile-dropdown-toggle">
+          <span>Projects</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <ul class="mobile-submenu">
+          <li><a href="About-project.html">Sapphire Complex</a></li>
+        </ul>
+      </li>
+
       <li><a href="contact.html">Contact Us</a></li>
+
     </ul>
+
   </div>
 </nav>
 
@@ -127,7 +145,7 @@
 
   <!-- ========================who we are section starts here=========================-->
 
-  <section class="who-we-are container my-5 py-5">
+  <section class="who-we-are container my-0 py-5 my-lg-5">
     <div class="row  justify-content-center py-4">
       <!-- Left Side -->
       <div class="col-md-4 text-md-start text-center mb-4 mb-md-0">
@@ -196,29 +214,44 @@
   <!-- our project section starts here  -->
 
   <section class="projects-section py-5">
-  <div class="container-lg">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="projects-title">Sapphire Complex</h1>
-      <div class="d-flex align-items-center gap-3">
-        <span class="more-projects-link">Check Out More Projects</span>
-        <a class="more-arrow-link" href="projects.html">
-          <span class="more-arrow">
+    <div class="container-lg">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="projects-title">Sapphire Complex</h1>
+        <div class="d-flex align-items-center gap-3">
+          <span class="more-projects-link">Check Out More Projects</span>
+          <a class="more-arrow-link" href="projects.html">
+            <span class="more-arrow">
+              <i class="bi bi-arrow-up-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ⭐ Modified Banner Like Screenshot -->
+      <div class="project-hero">
+        <div class="project-hero-wrapper">
+
+          <!-- TOP LEFT BADGES -->
+          <div class="project-badges">
+            <span class="badge-item">Shopping Complex</span>
+            <span class="badge-item">Parking Spot</span>
+          </div>
+
+          <!-- TOP RIGHT ICON -->
+          <div class="project-icon">
             <i class="bi bi-arrow-up-right"></i>
-          </span>
-        </a>
+          </div>
+
+          <!-- BOTTOM TITLE -->
+          <!-- <h2 class="project-hero-title">Lorem Ipsum Building - Agra</h2> -->
+
+        </div>
       </div>
     </div>
-  </div>
+    <!-- ⭐ END Modified Banner -->
+  </section>
 
-
-    <!-- ✅ NEW: Single Banner Image -->
-    <div class="single-banner-wrap">
-      <img src="images/Carousel.jpg" alt="Project Banner" class="single-banner-img">
-    </div>
-    <!-- ✅ END: Single Banner Image -->
-
-
-</section>
 
 
   <!-- testimonial section starts here -->
@@ -248,7 +281,7 @@
         <div class="testimonial-box">
           <div class="testimonial-content">
             <div class="testimonial-img">
-              <img src="images/Layer 2.png" alt="Client Photo">
+              <img src="images/Layer 3.png" alt="Client Photo">
             </div>
             <div class="testimonial-text">
               <p>
@@ -328,8 +361,8 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <h5>CONTACT US</h5>
           <p><a href="https://maps.app.goo.gl/tYgP7UiYuKRf39iX8">Zarak United LTD.<br>
-            307B, Business Square, Sanjay
-            Place, Near ICICI Bank, Agra</a></p>
+              307B, Business Square, Sanjay
+              Place, Near ICICI Bank, Agra</a></p>
         </div>
 
         <!-- Links -->

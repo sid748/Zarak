@@ -11,51 +11,31 @@ window.addEventListener('scroll', () => {
 });
 
 // === Mobile menu toggle for overlay (used in pages like About us, properties, etc.) ===
-const toggler = document.querySelector('.navbar-toggler');
-const mobileMenu = document.querySelector('.mobile-menu-overlay');
-const closeMenu = document.querySelector('.close-menu');
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu-fullscreen");
+const overlay = document.querySelector(".mobile-menu-overlay");
 
-if (toggler && mobileMenu) {
-  // Open menu (slide in from left + hamburger → cross)
-  toggler.addEventListener('click', () => {
-    mobileMenu.classList.add('active');        // menu slides in
-    toggler.classList.add('open');             // hamburger → cross
+if (hamburger && mobileMenu && overlay) {
+  // MENU OPEN/CLOSE
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
+
+    // Change icon (bars ↔ close)
+    hamburger.innerHTML = mobileMenu.classList.contains("active")
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
   });
 
-  // Close menu
-  if (closeMenu) {
-    closeMenu.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');     // menu slides out
-      toggler.classList.remove('open');          // cross → hamburger
-    });
-  }
-
-  // Close menu when clicking a mobile menu link
-  document.querySelectorAll('.mobile-menu-list a:not(.mobile-dropdown-toggle)').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      toggler.classList.remove('open');
-    });
-  });
-
-  // Close menu when clicking submenu links
-  document.querySelectorAll('.mobile-submenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      toggler.classList.remove('open');
-    });
+  // Close when overlay clicked
+  overlay.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+    hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
   });
 }
-
-// Mobile dropdown toggle
-document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
-  toggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    const submenu = toggle.nextElementSibling;
-    submenu.classList.toggle('active');
-    toggle.classList.toggle('active');
-  });
-});
 
 // === Fullscreen mobile menu toggle (used in index.html) ===
 const mobileToggle = document.querySelector('.mobile-toggle');
@@ -65,6 +45,12 @@ if (mobileToggle && mobileFullscreen) {
   mobileToggle.addEventListener('click', () => {
     mobileFullscreen.classList.toggle('active');
     mobileToggle.classList.toggle('active');
+    // Change icon to cross when menu is open
+    if (mobileFullscreen.classList.contains('active')) {
+      mobileToggle.innerHTML = '<i class="fa-solid fa-xmark" style="color: white;"></i>';
+    } else {
+      mobileToggle.innerHTML = '<span></span><span></span>';
+    }
   });
 
   // Close menu when clicking a mobile menu link
@@ -72,6 +58,27 @@ if (mobileToggle && mobileFullscreen) {
     link.addEventListener('click', () => {
       mobileFullscreen.classList.remove('active');
       mobileToggle.classList.remove('active');
+      mobileToggle.innerHTML = '<span></span><span></span>';
+    });
+  });
+
+  // Mobile dropdown toggle (inside fullscreen menu)
+  document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const submenu = toggle.nextElementSibling;
+      submenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  });
+}
+
+// Dropdown for overlay menu (other pages)
+if (!mobileToggle) {
+  document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      toggle.nextElementSibling.classList.toggle("active");
     });
   });
 }
