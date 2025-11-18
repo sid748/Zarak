@@ -44,47 +44,68 @@
 <body>
 
   <!-- ===== Navbar Start ===== -->
-  <nav class="navbar navbar-expand-lg py-3">
-    <div class="container custom-navbar mx-auto">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="Zarak United Logo">
-      </a>
+ <nav class="navbar navbar-expand-lg py-3">
+  <div class="container custom-navbar mx-auto">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" alt="Zarak United Logo">
+    </a>
 
-      <!-- Hamburger -->
-      <button class="navbar-toggler" type="button">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+    <!-- 2 Line Hamburger -->
+    <button class="mobile-toggle d-lg-none">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <!-- Desktop Menu -->
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="About-project.html">Project</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="properties.html">Buy/Sell</a></li> -->
-        </ul>
-      </div>
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
 
-      <div class="d-none d-lg-block">
-        <button class="contact-btn"><a href="contact.html" style="text-decoration: none; color: white" ;>CONTACT
-            US</a></button>
-      </div>
-    </div>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-      <div class="mobile-menu-header">
-        <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <ul class="mobile-menu-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About us.html">About</a></li>
-        <li><a href="About-project.html">Project</a></li>
-        <!-- <li><a href="properties.html">Buy/Sell</a></li> -->
-        <li><button class="contact-btn mt-3"><a href="contact.html">CONTACT US</a></button></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#">Project</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="About-project.html">Sapphire Complex</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
-  </nav>
+
+    <div class="d-none d-lg-block">
+      <button class="contact-btn">
+        <a href="contact.html" style="text-decoration:none;color:white;">CONTACT US</a>
+      </button>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN MOBILE MENU -->
+  <div class="mobile-menu-fullscreen">
+
+    <ul class="mobile-menu-items">
+
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="About us.html">About</a></li>
+
+      <!-- MOBILE DROPDOWN -->
+      <li class="mobile-dropdown">
+        <div class="mobile-dropdown-toggle">
+          <span>Projects</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <ul class="mobile-submenu">
+          <li><a href="About-project.html">Sapphire Complex</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+
+  </div>
+</nav>
   <!-- ===== Navbar End ===== -->
 
   <!-- contact form (Let's connect) -->
@@ -225,12 +246,10 @@
 
 
   <!-- scrolling text section starts here -->
-  <div class="scrolling-text-container">
+   <div class="scrolling-text-container">
     <div class="scrolling-text">
-      Turning Land into Opportunity • Building with Trust • Creating Spaces that Inspire • Designed Around You •
-      Delivering Value that Lasts •
-      Turning Land into Opportunity • Building with Trust • Creating Spaces that Inspire • Designed Around You •
-      Delivering Value that Lasts •
+      High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your Future High Visibility, High Returns •
+      Spaces Built For Growth • Your Plot - Your Future
     </div>
   </div>
   <!-- scrolling text section ends here -->
@@ -252,19 +271,22 @@
         <!-- social icons -->
         <div class="col-lg-3 col-md-12 mb-4">
           <div class="social-icons mt-4">
-            <a href="#"><i class="bi bi-twitter"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
+            <!-- <a href="#"><i class="bi bi-twitter"></i></a> -->
+            <!-- <a href="https://www.linkedin.com/company/zarakunited/?originalSubdomain=in"><i
+                class="bi bi-linkedin"></i></a> -->
+            <a href="https://www.facebook.com/profile.php?id=61559755122805"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/zarak_united/">
+              <i class="bi bi-instagram"></i>
+            </a>
           </div>
         </div>
 
         <!-- Contact Us -->
         <div class="col-lg-3 col-md-6 mb-4">
           <h5>CONTACT US</h5>
-          <p>Zarak United LTD.<br>
-            307B, Business Square, Sanjay
-            Place, Near ICICI Bank, Agra</p>
+          <p><a href="https://maps.app.goo.gl/tYgP7UiYuKRf39iX8">Zarak United LTD.<br>
+              307B, Business Square, Sanjay
+              Place, Near ICICI Bank, Agra</a></p>
         </div>
 
         <!-- Links -->

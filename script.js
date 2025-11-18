@@ -10,25 +10,25 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// === Mobile menu toggle for overlay (used in pages like About us, properties, etc.) ===
+/* ============================
+   MOBILE MENU (OVERLAY TYPE)
+============================ */
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-menu-fullscreen");
 const overlay = document.querySelector(".mobile-menu-overlay");
 
 if (hamburger && mobileMenu && overlay) {
-  // MENU OPEN/CLOSE
   hamburger.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
     overlay.classList.toggle("active");
     document.body.classList.toggle("no-scroll");
 
-    // Change icon (bars ↔ close)
+    // Icon toggle
     hamburger.innerHTML = mobileMenu.classList.contains("active")
       ? '<i class="fa-solid fa-xmark"></i>'
       : '<i class="fa-solid fa-bars"></i>';
   });
 
-  // Close when overlay clicked
   overlay.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
     overlay.classList.remove("active");
@@ -37,7 +37,33 @@ if (hamburger && mobileMenu && overlay) {
   });
 }
 
-// === Fullscreen mobile menu toggle (used in index.html) ===
+/* ============================
+   MOBILE DROPDOWN
+============================ */
+document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const submenu = toggle.nextElementSibling;
+
+    // Toggle dropdown
+    toggle.classList.toggle("active");
+    submenu.classList.toggle("active");
+
+    // Reset animation when closing
+    if (!submenu.classList.contains("active")) {
+      submenu.querySelectorAll("li").forEach(li => {
+        li.style.animation = "none";
+        li.offsetHeight;
+        li.style.animation = "";
+      });
+    }
+  });
+});
+
+/* ============================
+   FULLSCREEN MENU (INDEX PAGE)
+============================ */
 const mobileToggle = document.querySelector('.mobile-toggle');
 const mobileFullscreen = document.querySelector('.mobile-menu-fullscreen');
 
@@ -45,47 +71,22 @@ if (mobileToggle && mobileFullscreen) {
   mobileToggle.addEventListener('click', () => {
     mobileFullscreen.classList.toggle('active');
     mobileToggle.classList.toggle('active');
-    // Change icon to cross when menu is open
-    if (mobileFullscreen.classList.contains('active')) {
-      mobileToggle.innerHTML = '<i class="fa-solid fa-xmark" style="color: white;"></i>';
-    } else {
-      mobileToggle.innerHTML = '<span></span><span></span>';
-    }
   });
 
-  // Close menu when clicking a mobile menu link
   document.querySelectorAll('.mobile-menu-items a').forEach(link => {
     link.addEventListener('click', () => {
       mobileFullscreen.classList.remove('active');
       mobileToggle.classList.remove('active');
-      mobileToggle.innerHTML = '<span></span><span></span>';
-    });
-  });
-
-  // Mobile dropdown toggle (inside fullscreen menu)
-  document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      const submenu = toggle.nextElementSibling;
-      submenu.classList.toggle('active');
-      toggle.classList.toggle('active');
     });
   });
 }
 
-// Dropdown for overlay menu (other pages)
-if (!mobileToggle) {
-  document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
-    toggle.addEventListener("click", () => {
-      toggle.classList.toggle("active");
-      toggle.nextElementSibling.classList.toggle("active");
-    });
-  });
-}
-
-// Desktop dropdown toggle (click-based)
+/* ============================
+   DESKTOP DROPDOWN
+============================ */
 document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
   const menu = toggle.nextElementSibling;
+
   toggle.addEventListener('click', (e) => {
     e.preventDefault();
 
