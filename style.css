@@ -142,7 +142,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 150px;
+    padding-top: 245px;
 
     /* slow + smooth + premium */
     transition: bottom 2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -269,9 +269,8 @@
     display: block !important;
     opacity: 1;
     height: auto;
+    padding-left: 0px !important;
 }
-
-
 
 .mobile-submenu li {
   opacity: 0;
@@ -561,7 +560,7 @@
   }
 
   /* Left link */
-  .know-more {
+  /* .know-more {
     font-size: 20px;
     font-weight: 500;
     color: #000;
@@ -570,12 +569,12 @@
     align-items: center;
     gap: 6px;
     transition: all 0.3s ease;
-  }
+  } */
 
-  .know-more i {
+  .who-heading i {
     background-color: #EBDDB6;
     color: #000;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     padding: 4px;
     border-radius: 3px;
@@ -930,18 +929,22 @@
   /* TOP RIGHT ICON BOX */
   .project-icon {
     position: absolute;
-    top: 25px;
+    bottom: 25px;
     right: 25px;
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
     background: #f5e7a5;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 600;
-    color: #000;
+    color: #000 !important;
+  }
+
+  .project-icon i{
+    color: #000000;
   }
 
   /* BOTTOM TITLE */
