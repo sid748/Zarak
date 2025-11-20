@@ -66,17 +66,20 @@ document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
 ============================ */
 const mobileToggle = document.querySelector('.mobile-toggle');
 const mobileFullscreen = document.querySelector('.mobile-menu-fullscreen');
+const navbar = document.querySelector('.custom-navbar');
 
-if (mobileToggle && mobileFullscreen) {
+if (mobileToggle && mobileFullscreen && navbar) {
   mobileToggle.addEventListener('click', () => {
     mobileFullscreen.classList.toggle('active');
     mobileToggle.classList.toggle('active');
+    navbar.classList.toggle('navbar-hidden');
   });
 
   document.querySelectorAll('.mobile-menu-items a').forEach(link => {
     link.addEventListener('click', () => {
       mobileFullscreen.classList.remove('active');
       mobileToggle.classList.remove('active');
+      navbar.classList.remove('navbar-hidden');
     });
   });
 }
