@@ -2395,13 +2395,14 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-image: url(images/hero-image\(1\).jpg);
   }
 
   /* Background image layer */
   .hero-project .hero__bg {
     position: absolute;
     inset: 0;
-    background-image: url(images/hero-image\(1\).jpg);
+    
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
