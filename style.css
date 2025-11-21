@@ -2701,17 +2701,17 @@
 
 /* Content Grid */
 .content-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display:flex;
     gap: 2rem;
     align-items: center;
+    justify-content: center;
 }
 
 /* RERA Card */
 .rera-card {
     padding: 2rem;
     background: #ffffff;
-    border: 2px solid rgba(52, 168, 129, 0.2);
+    border: 1px solid rgba(178, 141, 57, 0.2);
     border-radius: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
