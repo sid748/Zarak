@@ -13,7 +13,7 @@
     /* to prevent content being hidden behind fixed navbar */
   }
 
-  a{
+  a {
     text-decoration: none !important;
   }
 
@@ -681,25 +681,25 @@
   } */
 
   /* Arrow Icon Custom Styling */
-.who-arrow {
-  background-color: #EBDDB6;
-  color: #000;
-  padding: 8px;
-  border-radius: 4px;
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s ease;
-}
+  .who-arrow {
+    background-color: #EBDDB6;
+    color: #000;
+    padding: 8px;
+    border-radius: 4px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+  }
 
-/* Hover effect */
-.who-arrow:hover {
-  transform: translateX(3px) translateY(-3px);
-}
+  /* Hover effect */
+  .who-arrow:hover {
+    transform: translateX(3px) translateY(-3px);
+  }
 
   .know-more:hover i {
     transform: translateX(4px) rotate(45deg);
@@ -994,12 +994,13 @@
   /* our project section starts here */
   /* ✅ NEW: Single Banner Image Styles */
 
-  .projects-title{
+  .projects-title {
     font-size: 3.75rem;
     font-weight: 500;
     margin-bottom: 20px;
     color: #000000;
   }
+
   .more-arrow {
     font-size: 18px;
     font-weight: 500;
@@ -1025,6 +1026,13 @@
     overflow: hidden;
     margin-top: 10px;
   }
+
+  .project-hero-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
 
   .project-hero-wrapper {
     width: 100%;
@@ -2423,7 +2431,7 @@
   .hero-project .hero__bg {
     position: absolute;
     inset: 0;
-    
+
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2695,7 +2703,7 @@
     margin-top: 6px;
   }
 
-  .counter-section .btn-custom{
+  .counter-section .btn-custom {
     margin-top: 40px;
     font-size: 16px;
     width: 20%;
@@ -2714,7 +2722,8 @@
     .counter-box {
       margin-bottom: 30px;
     }
-    .counter-section .btn-custom{
+
+    .counter-section .btn-custom {
       width: 50%;
     }
   }
