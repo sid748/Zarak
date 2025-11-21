@@ -1462,6 +1462,7 @@
   }
 
   @media (max-width: 767px) {
+<<<<<<< HEAD
 
     /* Make row vertical */
     footer .row {
@@ -1520,6 +1521,21 @@
   }
 
 
+=======
+    footer {
+      text-align: left;
+    }
+
+    footer .social-icons a {
+      margin-right: 5px;
+    }
+
+    .footer-bottom img {
+      width: 260px;
+    }
+  }
+
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
   /* End of Footer Styles */
 
   /* About us page CSS starts here */
@@ -2683,6 +2699,7 @@
   }
 
   /* Section Styles */
+<<<<<<< HEAD
   .rera-security-section {
     padding: 4rem 1rem;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
@@ -2701,6 +2718,26 @@
   }
 
   .badge {
+=======
+.rera-security-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.7s ease-out;
+}
+
+.badge {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -2713,6 +2750,7 @@
     font-weight: 500;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
+<<<<<<< HEAD
   }
 
   .badge:hover {
@@ -2730,18 +2768,44 @@
   }
 
   .section-title {
+=======
+}
+
+.badge:hover {
+    background: rgba(52, 168, 129, 0.2);
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-small {
+    width: 12px;
+    height: 12px;
+}
+
+.section-title {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     font-size: 2.5rem;
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 1rem;
     line-height: 1.2;
+<<<<<<< HEAD
   }
 
   .section-description {
+=======
+}
+
+.section-description {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     font-size: 1.125rem;
     color: #666;
     max-width: 42rem;
     margin: 0 auto;
+<<<<<<< HEAD
   }
 
   /* Content Grid */
@@ -2754,6 +2818,20 @@
 
   /* RERA Card */
   .rera-card {
+=======
+}
+
+/* Content Grid */
+.content-grid {
+    display:flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RERA Card */
+.rera-card {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     padding: 2rem;
     background: #ffffff;
     border: 1px solid rgba(178, 141, 57, 0.2);
@@ -2761,6 +2839,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     animation: fadeInLeft 0.7s ease-out;
+<<<<<<< HEAD
   }
 
   .rera-card:hover {
@@ -2774,6 +2853,21 @@
   }
 
   .check-circle {
+=======
+}
+
+.rera-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.rera-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.check-circle {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     flex-shrink: 0;
     width: 4rem;
     height: 4rem;
@@ -2783,6 +2877,7 @@
     align-items: center;
     justify-content: center;
     color: #34a881;
+<<<<<<< HEAD
   }
 
   .rera-details {
@@ -2790,11 +2885,21 @@
   }
 
   .rera-header {
+=======
+}
+
+.rera-details {
+    flex: 1;
+}
+
+.rera-header {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
     flex-wrap: wrap;
+<<<<<<< HEAD
   }
 
   .rera-header h3 {
@@ -2804,6 +2909,17 @@
   }
 
   .verified-badge {
+=======
+}
+
+.rera-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.verified-badge {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
@@ -2813,6 +2929,7 @@
     border-radius: 0.375rem;
     font-size: 0.75rem;
     font-weight: 600;
+<<<<<<< HEAD
   }
 
   .rera-info {
@@ -2843,10 +2960,43 @@
   }
 
   .registration-number {
+=======
+}
+
+.rera-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.project-name {
+    font-size: 1.25rem;
+}
+
+.registration-number {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     font-size: 1.125rem;
     font-family: 'Courier New', monospace;
     color: #34a881;
     letter-spacing: 0.05em;
+<<<<<<< HEAD
   }
 
   /* Features Grid */
@@ -2857,6 +3007,18 @@
   }
 
   .feature-card {
+=======
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    gap: 1rem;
+    animation: fadeInRight 0.7s ease-out 0.15s both;
+}
+
+.feature-card {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     display: flex;
     gap: 1rem;
     padding: 1.5rem;
@@ -2864,6 +3026,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     transition: all 0.3s ease;
+<<<<<<< HEAD
   }
 
   .feature-card:hover {
@@ -2872,6 +3035,16 @@
   }
 
   .feature-icon {
+=======
+}
+
+.feature-card:hover {
+    border-color: rgba(52, 168, 129, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     flex-shrink: 0;
     width: 3rem;
     height: 3rem;
@@ -2879,6 +3052,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
   }
 
   .feature-icon.emerald {
@@ -2892,10 +3066,26 @@
   }
 
   .feature-content h4 {
+=======
+}
+
+.feature-icon.emerald {
+    background: rgba(52, 168, 129, 0.1);
+    color: #34a881;
+}
+
+.feature-icon.gold {
+    background: rgba(250, 204, 21, 0.1);
+    color: #facc15;
+}
+
+.feature-content h4 {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     font-size: 1.125rem;
     font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
+<<<<<<< HEAD
   }
 
   .feature-content p {
@@ -2906,25 +3096,50 @@
 
   /* Trust Footer */
   .trust-footer {
+=======
+}
+
+.feature-content p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Trust Footer */
+.trust-footer {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid #e5e7eb;
     animation: fadeInUp 0.7s ease-out 0.3s both;
+<<<<<<< HEAD
   }
 
   .trust-indicators {
+=======
+}
+
+.trust-indicators {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+<<<<<<< HEAD
   }
 
   .trust-item {
+=======
+}
+
+.trust-item {
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: #34a881;
+<<<<<<< HEAD
   }
 
   .trust-item span {
@@ -3016,6 +3231,96 @@
       gap: 1rem;
     }
   }
+=======
+}
+
+.trust-item span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rera-content {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .rera-security-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .rera-card {
+        padding: 1.5rem;
+    }
+
+    .rera-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .check-circle {
+        margin: 0 auto;
+    }
+
+    .rera-header {
+        justify-content: center;
+    }
+
+    .trust-indicators {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+>>>>>>> 229fcd2aff25c43092364d47491d35dcb4cd395d
 
 
   /* counter section */
