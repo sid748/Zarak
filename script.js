@@ -37,6 +37,46 @@ if (hamburger && mobileMenu && overlay) {
   });
 }
 
+
+// rera js here
+// Add smooth scroll behavior
+document.addEventListener('DOMContentLoaded', function() {
+    // Add intersection observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll('.section-header, .rera-card, .features-grid, .trust-footer');
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Add hover effect enhancement for cards
+    const cards = document.querySelectorAll('.rera-card, .feature-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+    });
+
+    // Log RERA details to console for verification
+    console.log('RERA Approved Project Loaded');
+    console.log('Project: Sapphire Complex');
+    console.log('Registration: UPRERAPRJ689444/10/2025');
+});
+
+
 /* ============================
    MOBILE DROPDOWN
 ============================ */
