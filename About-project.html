@@ -455,6 +455,24 @@
   <script src="https://kit.fontawesome.com/0db0bdec09.js" crossorigin="anonymous"></script>
   <!-- Js File -->
   <script src="script.js"></script>
+
+  <!-- Logo Switch Script -->
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+              const heroSection = document.querySelector('.hero-project');
+              const logoImg = document.querySelector('.navbar-brand img');
+
+              if (heroSection && logoImg) {
+                    window.addEventListener('scroll', function() {
+                          if (window.scrollY > heroSection.offsetHeight) {
+                                logoImg.src = 'images/logo.webp';
+                          } else {
+                                logoImg.src = 'images/logo-white.webp';
+                          }
+                    });
+              }
+        });
+  </script>
 </body>
 
 </html>
