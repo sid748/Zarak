@@ -157,7 +157,8 @@
     bottom: 0;
   }
 
-  .mobile-menu-fullscreen.active {
+  .mobile-menu-fullscreen.active,
+.mobile-menu-overlay.active {
     position: fixed;
     /* Ensures it's positioned relative to the viewport */
     top: 0;
@@ -167,7 +168,7 @@
     /* Or min-height: 100vh; if you understand the mobile browser caveats and it works for your use case. */
     overflow-y: auto;
     /* Allows content within the menu to scroll if it exceeds height */
-    z-index: 100000;
+    z-index: 999;
     /* Ensure it's on top of other content */
   }
 
