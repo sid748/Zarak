@@ -449,3 +449,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// contact form submission script
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop default submit
+
+    const form = this;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert("Thank you! Your message has been sent.");
+            form.reset(); // clear the form
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    })
+    .catch(() => {
+        alert("Network error. Please check your connection.");
+    });
+});
+
+
+
+

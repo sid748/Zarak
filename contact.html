@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- favicon -->
- <link rel="icon" type="image/png" href="images/favicon (1).webp">
+  <link rel="icon" type="image/png" href="images/favicon (1).webp">
 
   <!-- Meta Tags -->
- <meta name="title" content="Zarak United: Real Estate Developer in Agra" />
+  <meta name="title" content="Zarak United: Real Estate Developer in Agra" />
   <meta name="description"
     content="Zarak United Private Limited is a real estate development company based in Agra, India, established in 2024. We focus on modern infrastructure, premium developments and sustainable value-driven real estate solutions." />
   <meta name="keywords"
@@ -24,14 +24,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="language" content="English" />
 
-   <!-- Social Share -->
-    <meta property="og:title" content="Zarak United: Real Estate Developer in Agra" />
-    <meta property="og:description"
-        content="Zarak United Private Limited is a real estate development company based in Agra, India, established in 2024. We focus on modern infrastructure, premium developments and sustainable value-driven real estate solutions." />
-    <!-- <meta property="og:url" content="https://mediax.co.in/" /> -->
-    <meta property="og:image" content="images/Share-image.webp" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Zarak United" />
+  <!-- Social Share -->
+  <meta property="og:title" content="Zarak United: Real Estate Developer in Agra" />
+  <meta property="og:description"
+    content="Zarak United Private Limited is a real estate development company based in Agra, India, established in 2024. We focus on modern infrastructure, premium developments and sustainable value-driven real estate solutions." />
+  <!-- <meta property="og:url" content="https://mediax.co.in/" /> -->
+  <meta property="og:image" content="images/Share-image.webp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Zarak United" />
 
   <!-- Aos css -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 <body>
 
   <!-- ===== Navbar Start ===== -->
-     <nav class="navbar navbar-expand-lg py-3">
+  <nav class="navbar navbar-expand-lg py-3">
     <div class="container custom-navbar mx-auto">
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.webp" alt="Zarak United Logo">
@@ -127,7 +127,8 @@
       <div class="row">
 
         <!-- Left: Info -->
-        <div class="col-lg-6 contact-info text-lg-start text-start" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="col-lg-6 contact-info text-lg-start text-start" data-aos="fade-up" data-aos-delay="200"
+          data-aos-duration="1000">
           <h2 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Let's get in touch</h2>
           <div class="row d-flex justify-content-start ">
             <div class="col-lg-6">
@@ -168,27 +169,36 @@
         <div class="col-lg-6 mt-4 mt-lg-0">
           <div class="contact-form">
             <h6>Need clarity or details? Our team is just a message away.</h6>
-            <form>
-              <input type="text" class="form-control" placeholder="Name" required>
-              <input type="email" class="form-control" placeholder="Email" required>
-              <input type="text" class="form-control" placeholder="Phone" required>
-              <select class="form-select">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+              <!-- REQUIRED: Your Web3Forms Access Key -->
+              <input type="hidden" name="access_key" value="54406a1a-a73e-4f5a-8662-8ca810fd7d81">
+
+              <input type="text" class="form-control" name="name" placeholder="Name" required>
+              <input type="email" class="form-control" name="email" placeholder="Email" required>
+              <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+
+              <select class="form-select" name="project" required>
                 <option selected disabled>Project you’re interested in</option>
-                <option>Sapphire Complex
-                </option>
-                <!-- <option>Sell</option> -->
+                <option>Sapphire Complex</option>
               </select>
-              <select class="form-select">
+
+              <select class="form-select" name="budget" required>
                 <option selected disabled>Budget</option>
                 <option>25-50L</option>
                 <option>Above 50L</option>
                 <option>Above 1Cr</option>
               </select>
-              <!-- <input type="text" class="form-control" placeholder="Company's name"> -->
-              <!-- <input type="text" class="form-control" placeholder="Address"> -->
-              <textarea class="form-control" placeholder="Message" rows="3"></textarea>
+
+              <textarea class="form-control" name="message" placeholder="Message" rows="3"></textarea>
+
+              <!-- OPTIONAL: Thank-you redirect -->
+              <!-- <input type="hidden" name="redirect" value="thank-you.html"> -->
+
               <button type="submit" class="btn-submit">Submit</button>
             </form>
+
           </div>
         </div>
 
@@ -260,14 +270,17 @@
   <!-- scrolling text section starts here -->
   <div class="scrolling-text-container">
     <div class="scrolling-text">
-      • High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your Future • High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your Future • High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your Future • High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your Future •
+      • High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your Future • High Visibility, High
+      Returns • Spaces Built For Growth • Your Plot - Your Future • High Visibility, High Returns • Spaces Built For
+      Growth • Your Plot - Your Future • High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your
+      Future •
       High Visibility, High Returns • Spaces Built For Growth • Your Plot - Your Future •
     </div>
   </div>
   <!-- scrolling text section ends here -->
 
   <!-- Footer Section -->
-   <footer data-aos="fade-up" data-aos-duration="1000">
+  <footer data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
       <div class="row">
 
